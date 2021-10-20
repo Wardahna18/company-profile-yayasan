@@ -18,6 +18,9 @@ Route::get('/index', function()
 {
     return view('layouts.layouts');
 });
+Route::get('/about', function () {
+    return view('about');
+});
 
 Auth::routes();
 
