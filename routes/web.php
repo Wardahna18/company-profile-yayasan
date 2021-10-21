@@ -16,12 +16,15 @@ Route::get('/', function () {
 });
 Route::get('/index', function()
 {
-    return view('layouts.layouts');
-});
+    return view('index');
+})->name('index');
 Route::get('/about', function () {
     return view('about');
-});
+})->name('about');
 
+Route::get('/donasi', function () {
+    return view('donasi');
+})->name('donasi');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
