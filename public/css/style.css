@@ -25,13 +25,44 @@
 section,
 footer {
     padding: 20px 0;
+
 }
 
-.donasih4 {
+.donasi img,
+.text {
+    width: 200px;
     font-weight: bold;
+    font-size: smaller;
     text-align: center;
 }
 
-.donasih6 {
+.donasi h6 {
     font-weight: bold;
+}
+
+.judul h4 {
+    font-weight: bold;
+    text-align: center;
+
+}
+
+#carousell img {
+    text-align: center;
+}
+
+.myImg {
+    text-align: center;
+}
+
+.myImg img {
+    margin: 10px;
+}
+
+#carousell img,
+p {
+    border-radius: 7%;
+    width: 200px;
+    text-align: center;
+    font-weight: bold;
+    margin: auto;
 }

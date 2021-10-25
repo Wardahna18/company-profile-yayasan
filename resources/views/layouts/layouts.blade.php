@@ -83,7 +83,13 @@
         });
 
         const carousel = document.querySelectorAll('.carousel');
-        M.Carousel.init(carousel);
+        M.Carousel.init(carousel,{
+            numVisible: 5,
+            indicators: true,
+            duration: 1000,
+            padding: 150,
+        });
+        
     </script>
 </body>
 

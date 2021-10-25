@@ -26,15 +26,22 @@
         </li>
     </ul>
 </div>
-<h4 class="donasih4">Tidak ada hal yang lebih menenangkan, selain berdonasi untuk para Santri </h4>
-<h6 class="donasih6">Kategori Donasi</h6>
-<div class="carousel">
-    <a class="carousel-item" href="#one!"><img src="img/portfolio/1.png"></a>
-    <a class="carousel-item" href="#one!"><img src="img/portfolio/1.png"></a>
-    <a class="carousel-item" href="#one!"><img src="img/portfolio/1.png"></a>
-    <a class="carousel-item" href="#one!"><img src="img/portfolio/1.png"></a>
-    <a class="carousel-item" href="#one!"><img src="img/portfolio/1.png"></a>
+<div class="judul">
+    <h4>Tidak ada hal yang lebih menenangkan, selain berdonasi untuk para Santri </h4>
 </div>
+<div class="row">
+    @foreach ($donasi as $item)
+    <div id="carousell" class="col s12 m2">
+        <a href="/img/{{$item->upload}}/{{$item->id}}">
+            <img src="/img/kategori/{{$item->upload}}">
+            <p>{{$item->nama_kategori}}</p>
+        </a>
+    </div>
+    @endforeach
+
+</div>
+
+
 <div class="row">
     <div class="col s12 m4">
         <div class="card">

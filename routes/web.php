@@ -23,8 +23,19 @@ Route::get('/about', function () {
 })->name('about');
 
 Route::get('/donasi', function () {
-    return view('donasi');
+    $donasi = \App\Kategori_Donasi::all();
+    return view('donasi', compact('donasi'));
 })->name('donasi');
+
+Route::get('/admin', function () {
+    return view('layouts.admin');
+});
+Route::get('/admin/donasi/kategori', 'DonasiController@admin_index')->name('donasi-kategori');
+Route::post('/admin/donasi/kategori/store', 'DonasiController@admin_store');
+Route::get('/admin/donasi/ruang', 'DonasiController@admin_ruang')->name('donasi-ruang');
+
+
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
