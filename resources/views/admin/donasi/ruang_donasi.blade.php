@@ -17,9 +17,10 @@
             <div class="row">
                 <div class="input-field col s6">
                     <select>
-                        <option value="1">Option 1</option>
-                        <option value="2">Option 2</option>
-                        <option value="3">Option 3</option>
+                        <option disabled selected>Choose your option</option>
+                        @foreach ($kategori as $item)
+                        <option value="{{$item->id}}">{{$item->nama_kategori}}</option>
+                        @endforeach
                     </select>
                     <label>Kategori Donasi</label>
                 </div>
@@ -31,7 +32,7 @@
                         name="nama">
                     <label for="first_name">Nama Ruang Donasi</label>
                 </div>
-               
+
                 <div class="input-field col s6">
                     <input id="last_name" type="submit" class="validate btn">
                 </div>

@@ -107,6 +107,7 @@ class DonasiController extends Controller
 
     public function admin_ruang()
     {
-        return view('admin.donasi.ruang_donasi');
+        $kategori = Kategori_Donasi::all();
+        return view('admin.donasi.ruang_donasi', compact('kategori'));
     }
 }
